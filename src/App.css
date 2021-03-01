@@ -1,3 +1,8 @@
+img {
+  width: 100%;
+  display: block;
+}
+/* 
 .App {
   text-align: center;
 }
@@ -33,6 +38,24 @@
     transform: rotate(0deg);
   }
   to {
+
     transform: rotate(360deg);
   }
+} */
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+  "h h"
+  "n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  width: 100vw;
+  /* grid-gap: 10px; */
 }
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: rgb(6, 102, 70);
+}
+
