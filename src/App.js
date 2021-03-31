@@ -4,12 +4,12 @@ import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
 import Header from './components/Header/Header';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-
-const App = (props) => {
+import UsersContainer from './components/Users/UsersContainer';
+const App = () => {
  
   return (
       <div className='app-wrapper'>
@@ -17,15 +17,17 @@ const App = (props) => {
         <NavBar />
         <div className='app-wrapper-content'>
           <Route path='/Dialogs' 
-            render={ () => <DialogsContainer store={props.store} /> }/>
+                render={ () => <DialogsContainer /> }/>
           <Route path='/Profile' 
-            render={ () => <Profile store={props.store} /> }/>
-          <Route path='/News' 
-            render={ () => <News /> } />
+                render={ () => <Profile /> }/>
+          <Route path='/Users'
+                render={ () => <UsersContainer />  }/>
+          {/* <Route path='/News' 
+                render={ () => <News /> } />
           <Route path='/Music' 
-            render={ () => <Music /> } />
+                render={ () => <Music /> } />
           <Route path='/Settings' 
-            render={ () => <Settings /> } />
+                render={ () => <Settings /> } /> */}
         </div>
       </div>
   )
