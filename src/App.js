@@ -1,7 +1,7 @@
 // import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Profile from './components/Profile/Profile';
+import ProfileContainer from './components/Profile/ProfileContainer';
 import Header from './components/Header/Header';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import {Route} from 'react-router-dom';
@@ -19,7 +19,7 @@ const App = () => {
           <Route path='/Dialogs' 
                 render={ () => <DialogsContainer /> }/>
           <Route path='/Profile' 
-                render={ () => <Profile /> }/>
+                render={ () => <ProfileContainer /> }/>
           <Route path='/Users'
                 render={ () => <UsersContainer />  }/>
           {/* <Route path='/News' 
